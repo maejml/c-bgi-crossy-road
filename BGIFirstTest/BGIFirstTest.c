@@ -9,7 +9,7 @@
 
 // Circle function creating a circle shape
 void Circle(int y) {
-	setfillstyle(SOLID_FILL, LIGHTCYAN);
+	setfillstyle(SOLID_FILL, YELLOW);
 	circle(310, 60 + y, 10);					// Vertical position is set with a variable
 	floodfill(311, 61+y, WHITE);
 }
@@ -41,7 +41,7 @@ void obstacle4(int x) {
 
 // Function to create finish line rectangle shape, text and display next level number
 void FinishArea(int current_level) {
-	setfillstyle(SOLID_FILL, YELLOW);
+	setfillstyle(SOLID_FILL, LIGHTCYAN);
 	rectangle(0, 400, 637, 430);
 	floodfill(1, 401, WHITE);
 
@@ -118,7 +118,7 @@ main()
 			// Make clear Motion
 			setactivepage(counter % 2);
 
-			// Set Yellow Finish Line
+			// Set Finish Line
 			FinishArea(lvl);
 
 			// Go Down
@@ -189,7 +189,7 @@ main()
 	settextstyle(BOLD_FONT, HORIZ_DIR, 70);
 	outtextxy(midx - strlen(game_over), (midy - 100), game_over);
 	setcolor(WHITE);
-	settextstyle(BOLD_FONT, HORIZ_DIR, 30);
+	settextstyle(BOLD_FONT, HORIZ_DIR, 15);
 	outtextxy(midx - strlen(play_again), (midy + 100), play_again);
 	
 	// Play again or stop 
