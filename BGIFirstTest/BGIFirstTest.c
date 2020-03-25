@@ -10,30 +10,30 @@
 // Circle function creating a circle shape
 void Circle(int y) {
 	setfillstyle(SOLID_FILL, YELLOW);
-	circle(310, 60 + y, 10);					// Vertical position is set with a variable
+	circle(310, 60 + y, 10);			// Vertical position is set with a variable
 	floodfill(311, 61+y, WHITE);
 }
 
 // Obstacle functions creating rectangle shapes at different positions on screen
-void obstacle1(int x) {
+void Obstacle1(int x) {
 	setfillstyle(SOLID_FILL, LIGHTRED);
 	rectangle(-400 + x, 150, 0 + x, 160);		// Horizontal position is set with a variable
 	floodfill(-399 + x, 151, WHITE);
 }
 
-void obstacle2(int x) {
+void Obstacle2(int x) {
 	setfillstyle(SOLID_FILL, LIGHTRED);
 	rectangle(637 + x, 200, 1037 + x, 210);
 	floodfill(638 + x, 201, WHITE);
 }
 
-void obstacle3(int x) {
+void Obstacle3(int x) {
 	setfillstyle(SOLID_FILL, LIGHTRED);
 	rectangle(-500 + x, 250, -100 + x, 260);
 	floodfill(-499 + x, 251, WHITE);
 }
 
-void obstacle4(int x) {
+void Obstacle4(int x) {
 	setfillstyle(SOLID_FILL, LIGHTRED);
 	rectangle(800 + x, 300, 1200 + x, 310);
 	floodfill(801+x, 301, WHITE);
@@ -151,10 +151,10 @@ main()
 			if (x4 >= 1200) { x4 = 0; }					// Obstacle 4 Loop
 			
 			// Print Obstacles
-			obstacle1(x1);
-			obstacle2(-x2);
-			obstacle3(x3);
-			obstacle4(-x4);
+			Obstacle1(x1);
+			Obstacle2(-x2);
+			Obstacle3(x3);
+			Obstacle4(-x4);
 
 			// Impact
 			if (((300+v <= x1) && (x1 <= 710+v)) && ((80 < y) && (y < 110))) { N = 1; }				// Impact Obstacle 1
